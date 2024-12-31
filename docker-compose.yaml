@@ -1,10 +1,11 @@
-version: "3.7"
 services:
   ocr:
-    image: techblog/ocr-docker:latest
+    #image: techblog/ocr-docker:latest
+    build:
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
-    container_name: tts-stt
+    container_name: ocr-docker
     labels:
       - "com.ouroboros.enable=true"
     networks:
